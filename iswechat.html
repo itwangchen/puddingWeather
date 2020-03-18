@@ -18,13 +18,18 @@
                 alert('微信进入')
                 // var weixintarger = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=申请到的appid&redirect_uri=授权过后要去的页面地址（要encode）&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect';
                 // window.location.href = weixintarger;
-            }else if (ua.match(/AlipayClient/i) == 'alipayclient') {  //判断是不是支付宝
+            } else if (ua.match(/AlipayClient/i) == 'alipayclient') {  //判断是不是支付宝
                 document.title = '支付宝扫码进入';
                 // var alipaytarget = 'https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=申请到的appid&scope=auth_user&redirect_uri=授权过后要去的页面地址（要encode)&state=2';
                 // window.location.href = alipaytarget;
                 alert('支付宝进入')
-            }else {
+            } else {
                 document.title = '非微信,支付宝进入';
+                alert('纬度: ' + position.coords.latitude + '\n' +
+                    '经度: ' + position.coords.longitude + '\n' +
+                    '海拔: ' + position.coords.altitude + '\n' +
+                    '水平精度: ' + position.coords.accuracy + '\n' +
+                    '垂直精度: ' + position.coords.altitudeAccura)
                 alert('其他平台')
             }
         }
