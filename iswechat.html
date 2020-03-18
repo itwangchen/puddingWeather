@@ -16,7 +16,6 @@
             if (ua.match(/MicroMessenger/i) == 'micromessenger') {
                 document.title = '微信扫码进入';
                 alert('微信进入')
-
                 // var weixintarger = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=申请到的appid&redirect_uri=授权过后要去的页面地址（要encode）&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect';
                 // window.location.href = weixintarger;
             }else if (ua.match(/AlipayClient/i) == 'alipayclient') {  //判断是不是支付宝
